@@ -3,52 +3,36 @@ import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'id', headerName: 'USER ID', width: 90 },
   {
-    field: 'firstName',
-    headerName: 'First name',
+    field: 'title',
+    headerName: 'TITLE',
+    width: 450,
+    editable: true,
+  },
+  {
+    field: 'completed',
+    headerName: 'COMPLETED',
     width: 150,
     editable: true,
-  },
-  {
-    field: 'lastName',
-    headerName: 'Last name',
-    width: 150,
-    editable: true,
-  },
-  {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 110,
-    editable: true,
-  },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
   },
 ];
 
 const rows = [
-  { id: 1, lastName: 'Federico', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Martina', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Vincenzo', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Alessandro', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Martina', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Vanessa', firstName: null, age: 150 },
-  { id: 7, lastName: 'Claudia', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Camilla', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Giuseppe', firstName: 'Harvey', age: 65 },
+  { id: 1, title: 'delectus aut autem', completed: 'X'},
+  { id: 2, title: 'quis ut nam facilis et officia qui', completed: 'X'},
+  { id: 3, title: 'fugiat veniam minus ', completed: 'X'},
+  { id: 4, title: 'et porro tempora', completed: 'V'},
+  { id: 5, title: 'laboriosam molitia et enim quasi adipisci quia provident ilum', completed: 'X'},
+  { id: 6, title: 'Vanessa', completed: null},
+  { id: 7, title: 'Claudia', completed: 'X'},
+  { id: 8, title: 'Camilla', completed: 'X'},
+  { id: 9, title: 'Giuseppe', completed: 'X'},
 ];
 
 function Main() {
   return (
-    <Box sx={{ height: 400, width: '100%' }}>
+    <Box sx={{ height: 400, width: '70%' }}>
       <DataGrid
         rows={rows}
         columns={columns}
