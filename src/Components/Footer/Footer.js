@@ -1,7 +1,7 @@
-import * as React from 'react';
+import * as React from "react";
 import { Box, Container, Grid, Typography, Link } from "@mui/material";
 
-function Footer(){
+function Footer() {
   return (
     <Box
       sx={{
@@ -22,19 +22,13 @@ function Footer(){
           <Grid item xs={12}>
             <Typography color="textSecondary" variant="subtitle1">
               {`${new Date().getFullYear()} | React | Material UI | Federico Guarino | `}
-
-              <Link color="inherit" href="https://mui.com/">
-              Guide Material UI
-              </Link>{" "}
-              
+              <Link href="https://mui.com/">Guide Material UI</Link>{" "}
             </Typography>
-
-           
           </Grid>
         </Grid>
       </Container>
     </Box>
   );
-};
+}
 
 export default Footer;

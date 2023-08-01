@@ -1,19 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 import React, { useEffect, useState } from "react";
-import Header from "./Header/Header";
-import Footer from './Footer/Footer';
-import Navbar from './Navbar/Navbar';
+import Footer from "./Components/Footer/Footer";
 
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListSubheader from '@mui/material/ListSubheader';
-
-import { Container } from '@mui/material';
-import Main from './Main/Main';
-
+import MainWrapper from "./Components/MainWrapper/MainWrapper";
+import Header from "./Components/Header/Header";
 
 const API = "https://jsonplaceholder.typicode.com/todos";
 const ELEMENTS_PER_PAGE = 6;
@@ -105,14 +96,10 @@ function App() {
     }
   };
 
-
   return (
     <div className="App">
       <Header />
-        <Container>
-          <Navbar />
-          <Main />
-        </Container>
+      <MainWrapper />
       <Footer />
     </div>
   );
